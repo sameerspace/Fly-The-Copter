@@ -28,7 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // HomeForm
             // 
@@ -40,11 +46,13 @@
             this.Text = "Fly The Copter";
             this.Load += new System.EventHandler(this.HomeForm_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HomeForm_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HomeForm_MouseMove);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Timer timer1;
     }
 }
